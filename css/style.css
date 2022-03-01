@@ -1,0 +1,237 @@
+
+body {
+	background: #fff;
+	font-family: Spartan,sans-serif;
+}
+
+* {
+	box-sizing: border-box;
+	transition: all .4s linear;
+}
+
+.header .navv {
+	height: 2rem;
+	position: relative;
+	z-index: 9;
+}
+.header .navv:hover {
+	background: white;
+	height: 4.5rem;
+}
+
+.header .navbar {
+	z-index: 10;
+}
+
+.header .navv.sticky {
+	position: fixed;
+	top:0;
+	height: 3rem;
+	color: white;
+}
+
+.header .navbar .nav-item a {
+	font-size: .7rem;
+	text-transform: uppercase;
+	font-weight: 800;
+	position: relative;
+}
+
+.header .navbar .nav-item {
+	position: relative;;
+}
+
+.header .nav-menu .nav-item a::after {
+	content: "";
+	position: absolute;
+	display: block;
+	height: .15rem;
+	background: black;
+	width:0;
+	transition: width .4s linear;
+}
+
+.header .navbar .nav-item a:hover::after {
+	width: 70%;
+} 
+
+.header .navbar-brand {
+	font-size: 2.2rem;
+	font-weight: 800;
+}
+
+
+.header .navbar-toggler {
+	border: none;
+}
+.header .nav-icons .nav-item  {
+	display: flex;
+	flex-wrap: nowrap;
+	align-items: center;
+	position: relative;
+}
+.header .nav-icons .nav-item img {
+	margin-left: .8rem ;
+	cursor: pointer;
+}
+
+.header .nav-icons .cart-icon img {
+	align-self: flex-start;
+}
+
+.header .nav-icons .not-last::after {
+	content: "";
+    position: absolute;
+    top: 45%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    right: -1rem;
+    width: 1px;
+    height: 10px;
+    background-color: #000;
+}
+
+/* start carousel */
+.header .carousel {
+	position: absolute;
+	top: 0;
+}
+
+.header .carousel img {
+	animation: scaling 3s 1s forwards;
+}
+
+@keyframes scaling {
+	100% {
+		transform: scale(1.1);
+	}
+}
+
+.header .carousel .carousel-item .carousel-caption {
+	/* justify-content: flex-start; */
+	left: 6rem;
+	color: black;
+	font-size: .8rem;
+	font-weight: 700;
+	text-align: start;
+	top: 30%;
+	letter-spacing: -.04rem;
+}
+
+.header .carousel .carousel-item .carousel-caption div:nth-child(2) {
+	font-size: 1.9rem;
+	font-weight: 800;
+	margin-top: 1rem;
+}
+
+.header .carousel .carousel-item .carousel-caption div:nth-child(3) {
+	font-size: 2.7rem;
+	font-weight: 900;
+}
+
+.header .carousel .carousel-item .carousel-caption button {
+	display: block;
+	padding: .9rem;
+	border-radius: 0%;
+	font-size: .9rem;
+	font-weight: 700;
+	background: #fff;
+}
+
+.header .carousel .carousel-item .carousel-caption button:hover {
+	color: white;
+	background: black;
+}
+
+.header .carousel .carousel-item-1 .carousel-caption {
+	color: #655048;
+}
+
+.header .carousel .carousel-item-3 .carousel-caption {
+	color: white;
+	text-align: center;
+}
+
+.header .carousel .carousel-item-3 .carousel-caption button{
+	margin: auto;	
+}
+/* end carousel */
+
+
+/* start policy */
+.main {
+	position: relative;
+}
+
+.main .policy .container .policy-item {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 1rem;
+	text-align: center;
+	font-size: .8rem;
+	letter-spacing: -.04rem;
+}
+
+.main .gallery {
+	margin-top: 5rem;
+}
+
+.main .policy .container .policy-item .policy-item-title {
+	font-weight: 800;
+	text-transform: uppercase;
+}
+
+.main .gallery .gallery-item {
+	position: relative;
+	text-align: center;
+	cursor: pointer;
+	overflow: hidden;
+}
+
+.main .gallery .gallery-item img {
+	object-fit: cover;
+	max-width: 100%;
+}
+
+.main .gallery .gallery-item:hover img{
+	animation: scaling 3s both;
+}
+
+.main .gallery .gallery-item .gallery-caption {
+	top: 0;
+	left:0;
+	width: 100%;
+	height: 90%;
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	align-items: center;
+	gap: 2rem;
+}
+
+.main .gallery .gallery-item .gallery-caption .gallery-title {
+	font-size: 1.7rem;
+	color: white;
+	font-weight: 700;
+}
+
+
+.main .gallery .gallery-item button {
+	display: block;
+	padding: .9rem;
+	border-radius: 0%;
+	font-size: .9rem;
+	font-weight: 700;
+	background: #fff;
+}
+
+.main .gallery .gallery-item button:hover {
+	color: white;
+	background: black;
+}
+
+/* end policy */
